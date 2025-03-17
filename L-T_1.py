@@ -2,7 +2,7 @@
 
 def merger(sent):
     cap=sent.capitalize()
-    question=("How","Why","Where","When","What")
+    question=("How","Why","Where","When","What","Who")
     if cap.startswith(question):
         return f"{cap}?"
     else:
