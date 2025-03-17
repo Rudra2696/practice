@@ -9,3 +9,8 @@ while True:
         break
     except (ValueError,TypeError,SyntaxError): 
         print("Invalid Input")
+
+if n==c:
+    print("You won")
+else:
+    print("You lost")
