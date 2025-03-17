@@ -7,9 +7,9 @@ l=[]
 for i in range(0,m):
     l.append(z[i])
 
-for i in range(0,m): 
-    if (l[i]==l[i+1]==l[i+2]):
-        print("yes")
+for y in range(0,m-2): 
+    if (l[y]==l[y+1]==l[y+2]):
+        print(f"{n} has consecutive three same characters")
         break
 else:
-    print("no")    
+    print(f"{n} has no consecutive three same characters")    
