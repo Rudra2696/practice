@@ -24,3 +24,6 @@ for i,j in zip(range(1,n+1),l):
     print(f"Your task {i} is {j}.")
         
 
+with open("task.txt","w") as f:
+    for i,j in zip(range(1,n+1),l):
+        f.write(f"Your task {i} is {j}.\n")
