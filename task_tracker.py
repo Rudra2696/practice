@@ -5,7 +5,7 @@ while True:
     try:
         n=int(input("Enter the number of task you want to add: "))
         break
-    except (ValueError,TypeError,SyntaxError):
+    except (ValueError,TypeError,SyntaxError,KeyError):
         print("Invalid Input")    
 
 l=[]
