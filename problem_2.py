@@ -1,4 +1,4 @@
-# check if any character is repeated more than once in the string
+# check if any character is repeating in the string
 
 n=input("Enter any string : ")
 z=n.lower().strip()
