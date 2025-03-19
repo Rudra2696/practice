@@ -32,6 +32,7 @@ def new_tracker():
             if m=="" :
                 print("Please enter your task ")
             else:
+                d.update({f"Task {i}" : z})
                 break
 
     for i,j in zip(range(1,n+1),d):
@@ -39,14 +40,14 @@ def new_tracker():
             
 
 
-    for i,j in zip(range(1,n+1),d):
-        d.update({f"Task {i}":f"{j}"})
-    print()  
+    # for i,j in zip(range(1,n+1),d):
+        
+    print(d)  
 
     with open("task_tracker.txt","w+") as f:
         f.write(str(d))
 
-def new_task():
+def add_tracker():
     with open("task_tracker.txt","r") as f:
         print("Your task is given below")
         a=f.read()
@@ -76,6 +77,6 @@ if g==1 :
 elif g==2 :
     change_tracker()
 elif g==3 :
-    new_task()
+    add_tracker()
 else :
     print("Something Went Wrong")    
