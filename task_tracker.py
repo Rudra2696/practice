@@ -7,7 +7,7 @@ while True:
         break
     except (ValueError,TypeError,SyntaxError,KeyError):
         print("Invalid Input")    
-
+d={}
 l=[]
 for i in range(1,n+1):
     while True:
@@ -24,6 +24,10 @@ for i,j in zip(range(1,n+1),l):
     print(f"Your task {i} is {j}.")
         
 
-with open("task.txt","w") as f:
-    for i,j in zip(range(1,n+1),l):
-        f.write(f"Your task {i} is {j}.\n")
+
+for i,j in zip(range(1,n+1),l):
+      d[f"Task {i}"] = j
+print(d)  
+
+with open("task_tracker.txt","w+") as f:
+    f.write(str(d))
