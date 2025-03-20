@@ -49,7 +49,7 @@ def new_tracker():
             else:
                 d.update({f"Task {i}" : z})
                 break
-
+    print("Your task is given below")
     for i,j in zip(range(1,n+1),d):
         print(f"Your task {i} is {j}.")
 
@@ -57,16 +57,33 @@ def new_tracker():
         f.write(str(d))
 
 def add_tracker():
+    print("Reading the task_tracker.txt file")
+
     with open("task_tracker.txt","r") as f:
         print("Your task is given below")
         a=f.read()
         print(a)
 
-    x=len(a)+1
+    try:
+        tasks = eval(a)
+    except (SyntaxError, NameError):
+        tasks = {}
+        print("Error: Unable to read tasks from file. Starting with an empty task list.")
+    b=dict(tasks)
 
-    y=input("Now write the task you want to add (you can only add a single task in one time): ")  
+    o=len(b.keys())+1    
 
-    a.update({f"Task {x}" : y})  
+    c = input("Now enter new task: ").strip()
+    print(o)
+    if c:
+        tasks[f"Task {o}"] = c
+        print(tasks)
+
+        with open("task_tracker.txt", "w") as f:
+            f.write(str(tasks))
+        print(f"Your task is changed\nYour new task is given below\n{tasks}")
+    else:
+        print("No new task entered. Task not updated.")    
 
 
 print("Welcome to task tracker")    
