@@ -1,20 +1,35 @@
 def change_tracker():
+    with open("task_tracker.txt", "r") as f:
+        print("Your task is given below")
+        a = f.read()
 
-    with open("task_tracker.txt","r") as f:
-        print("Your tadk is given below")
-        a=f.read()
-        print(a)
+    try:
+        tasks = eval(a)
+    except (SyntaxError, NameError):
+        tasks = {}
+        print("Error: Unable to read tasks from file. Starting with an empty task list.")
 
+    print(a)
     while True:
         try:
-            n=int(input("Enter the number of task you want to change (integer only) : ")) 
+            o = int(input("Enter the number of task you want to change (integer only): "))
+            if f"Task {o}" not in tasks:
+                print("Task number does not exist. Please enter a valid task number.")
+                continue
             break
-        except (ValueError,TypeError,SyntaxError,KeyError):
-            print("Invalid Input")   
+        except ValueError:
+            print("Invalid Input. Please enter an integer.")
 
-    c=input("Now enter new task : ")
+    c = input("Now enter new task: ").strip()
 
-    a.update({f"Task {n}" : c})   
+    if c:
+        tasks[f"Task {o}"] = c
+
+        with open("task_tracker.txt", "w") as f:
+            f.write(str(tasks))
+        print(f"Your task is changed\nYour new task is given below\n{tasks}")
+    else:
+        print("No new task entered. Task not updated.")
 
 def new_tracker():
 
@@ -37,12 +52,6 @@ def new_tracker():
 
     for i,j in zip(range(1,n+1),d):
         print(f"Your task {i} is {j}.")
-            
-
-
-    # for i,j in zip(range(1,n+1),d):
-        
-    print(d)  
 
     with open("task_tracker.txt","w+") as f:
         f.write(str(d))
