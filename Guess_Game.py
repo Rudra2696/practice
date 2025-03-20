@@ -5,12 +5,14 @@ print(c)
 
 while True:
     try:
-        n=int(input("Enter any integer : "))
-        break
+        n=int(input("Enter any integer (1-100): "))
+        if n==c:
+            print("You won")
+            break
+        elif n>c:
+            print("Too high")
+        else:
+            print("Too low")
     except (ValueError,TypeError,SyntaxError): 
         print("Invalid Input")
 
-if n==c:
-    print("You won")
-else:
-    print("You lost")
