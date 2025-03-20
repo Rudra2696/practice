@@ -100,9 +100,14 @@ while True:
 
 if g==1 :     
     new_tracker()
-elif g==2 :
-    change_tracker()
-elif g==3 :
-    add_tracker()
+elif (g==2 or g==3):
+    try:
+        with open("task_tracker.txt","r") as f:
+            if g==2:
+                change_tracker()
+            elif g==3:
+                add_tracker()
+    except FileNotFoundError:
+        print("task_tracker.txt file not found")
 else :
     print("Something Went Wrong")    
