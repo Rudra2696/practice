@@ -14,11 +14,14 @@ Sizer =3
 while True:
     try:
         n=input("Enter your choice : ")
-        break
+        b=n.lower().strip()
+        if (b=="stone" or b=="paper" or b=="sizer"):
+            break
+        else:
+            print("Please enter stone/paper/sizer only")
     except (ValueError,TypeError,SyntaxError,KeyError):
         print("Invalid Input")
 
-b=n.lower().strip()
 
 d={"stone" : 1 ,
    "paper" : 2,
