@@ -18,7 +18,7 @@ while True:
     except (ValueError,TypeError,SyntaxError,KeyError):
         print("Invalid Input")
 
-n=n.lower().strip()
+b=n.lower().strip()
 
 d={"stone" : 1 ,
    "paper" : 2,
@@ -28,22 +28,24 @@ d1={ 1: "Stone",
     3 : "Sizer"
 }
 
-user=d[n]
+user=d[b]
 out=d1[c]
 
-if (n==c):
+if (user==c):
     print("It's Draw!")
-elif(n==1 and c==2):
-    pass
-elif(n==1 and c==3):
-    pass
-elif(n==2 and c==1):
-    pass
-elif(n==2 and c==3):
-    pass
-elif(n==3 and c==1):    
-    pass
-elif(n==3 and c==2):
-    pass
+elif(user==1 and c==2):
+    print("You Lost!")
+elif(user==1 and c==3):
+    print("You Won!")
+elif(user==2 and c==1):
+    print("You Won!")
+elif(user==2 and c==3):
+    print("You Lost!")
+elif(user==3 and c==1):    
+    print("You Lost!")
+elif(user==3 and c==2):
+    print("You Won!")
 else:
     print("Something went wrong")
+
+print(f"You chose {n} and computer chose {out}")    
