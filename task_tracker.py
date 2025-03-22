@@ -113,6 +113,28 @@ def add_tracker():
     else:
         print("No new task entered. Task not updated.")    
 
+def delete_tracker():
+
+    with open("task_tracker.txt", "r") as f:    
+        a=f.read()
+        print("Your task is given below")
+        print(a)
+
+    while True: 
+        n=input("Are confirm to delete all tasks (yes/no) : ")
+        n.lower().strip()
+        if (n=="yes" or n=="no"): 
+            break
+        else:   
+            print("Please enter yes/no only")
+
+    if n=="yes":
+        with open("task_tracker.txt","w") as f:
+            f.write("")
+        print("All tasks are deleted")
+    else:
+        print("All tasks are not deleted")
+
 
 print("Welcome to task tracker")    
 
@@ -120,8 +142,8 @@ while True:
         try:
             g=int(input("Enter what do you want \n If you want to make new task list (Enter 1) \n "
             "If  you want to change task list (Enter 2) \n If you want to add new task (Enter 3) \n"
-            "IF youn want tpo remove any task (Enter 4): ")) 
-            if (g==1 or g==2 or g==3 or g==4):
+            "IF youn want tpo remove any task (Enter 4): \n If you wantto remove all tasks (Enter 5): ")) 
+            if (g==1 or g==2 or g==3 or g==4 or g==5):
                 break
             else:
                 print("Please enter 1/2/3 only")
@@ -131,7 +153,7 @@ while True:
 
 if g==1 :     
     new_tracker()
-elif (g==2 or g==3 or g==4):
+elif (g==2 or g==3 or g==4 or g==5):
     try:
         with open("task_tracker.txt","r") as f:
             if g==2:
@@ -139,7 +161,9 @@ elif (g==2 or g==3 or g==4):
             elif g==3:
                 add_tracker()
             elif g==4:
-                remove_tracker()    
+                remove_tracker()
+            elif g==5:
+                delete_tracker()        
     except FileNotFoundError:
         print("task_tracker.txt file not found")
 else :
