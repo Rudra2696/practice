@@ -54,7 +54,11 @@ def remove_tracker():
         except ValueError:
             print("Invalid Input. Please enter an integer.")   
     b=dict(tasks)
-    b.pop(o)
+    del b[f"Task {o}"]
+    print(b)
+
+    with open("task_tracker.txt", "w") as f:
+        f.write(str(b))
 
 def new_tracker():
 
@@ -136,7 +140,7 @@ elif (g==2 or g==3 or g==4):
             elif g==3:
                 add_tracker()
             elif g==4:
-                pass    
+                remove_tracker()    
     except FileNotFoundError:
         print("task_tracker.txt file not found")
 else :
