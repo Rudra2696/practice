@@ -33,7 +33,6 @@ def change_tracker():
 def remove_tracker():
 
     with open("task_tracker.txt", "r") as f:
-        print("Your task is given below")
         a = f.read()
 
     try:
@@ -42,7 +41,7 @@ def remove_tracker():
         tasks = {}
         print("Error: Unable to read tasks from file. Starting with an empty task list.")
 
-    print(a)
+    print(f" Your task was given below\n{a}")
 
     while True:
         try:
@@ -55,7 +54,7 @@ def remove_tracker():
             print("Invalid Input. Please enter an integer.")   
     b=dict(tasks)
     del b[f"Task {o}"]
-    print(b)
+    print(f"Your task was updated\n. Your new task is given below\n{b}")
 
     with open("task_tracker.txt", "w") as f:
         f.write(str(b))
