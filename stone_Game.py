@@ -8,7 +8,7 @@ print("Welcome to Stone Paper Sizer Game")
 """
 Stone = 1
 Paper = 2
-Sizer =3
+Sizer = 3
 """
 
 while True:
@@ -23,30 +23,33 @@ while True:
         print("Invalid Input")
 
 
-d={"stone" : 1 ,
-   "paper" : 2,
-   "sizer" : 3}
+if b=="stone":
+    b=1
+elif b=="paper":
+    b=2
+elif b=="sizer":
+    b=3
+
 d1={ 1: "Stone",
     2 : "Paper",
     3 : "Sizer"
 }
 
-user=d[b]
 out=d1[c]
 
-if (user==c):
+if (b==c):
     print("It's Draw!")
-elif(user==1 and c==2):
+elif(b==1 and c==2):
     print("You Lost!")
-elif(user==1 and c==3):
+elif(b==1 and c==3):
     print("You Won!")
-elif(user==2 and c==1):
+elif(b==2 and c==1):
     print("You Won!")
-elif(user==2 and c==3):
+elif(b==2 and c==3):
     print("You Lost!")
-elif(user==3 and c==1):    
+elif(b==3 and c==1):    
     print("You Lost!")
-elif(user==3 and c==2):
+elif(b==3 and c==2):
     print("You Won!")
 else:
     print("Something went wrong")
