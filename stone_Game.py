@@ -24,11 +24,11 @@ while True:
 
 
 if b=="stone":
-    b=1
+    d=1
 elif b=="paper":
-    b=2
+    d=2
 elif b=="sizer":
-    b=3
+    d=3
 
 d1={ 1: "Stone",
     2 : "Paper",
@@ -37,19 +37,19 @@ d1={ 1: "Stone",
 
 out=d1[c]
 
-if (b==c):
+if (d==c):
     print("It's Draw!")
-elif(b==1 and c==2):
+elif(d==1 and c==2):
     print("You Lost!")
-elif(b==1 and c==3):
+elif(d==1 and c==3):
     print("You Won!")
-elif(b==2 and c==1):
+elif(d==2 and c==1):
     print("You Won!")
-elif(b==2 and c==3):
+elif(d==2 and c==3):
     print("You Lost!")
-elif(b==3 and c==1):    
+elif(d==3 and c==1):    
     print("You Lost!")
-elif(b==3 and c==2):
+elif(d==3 and c==2):
     print("You Won!")
 else:
     print("Something went wrong")
