@@ -122,7 +122,7 @@ def delete_tracker():
 
     while True: 
         n=input("Are sure to delete all tasks (yes/no) : ")
-        n.lower().strip()
+        n=n.lower().strip()
         if (n=="yes" or n=="no"): 
             break
         else:   
