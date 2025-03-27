@@ -6,6 +6,17 @@ def timer(seconds):
     time.sleep(seconds)
     print("Time's up!")
 
-# Start the timer without blocking other code
-t = threading.Thread(target=timer, args=(5,))
+
+while True:
+    try:
+        n=int(input("Enter time in form of seconds : "))
+        if n>0:
+            break
+        else:
+            print("Please enter a positive number")
+    except (ValueError,TypeError,SyntaxError):
+        print("Invalid Input")
+    
+
+t = threading.Thread(target=timer, args=(n,))
 t.start()
