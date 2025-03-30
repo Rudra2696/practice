@@ -3,6 +3,9 @@
     margin: 0px;
 }
 
+#text{
+text-align: center;
+}
 main{
     text-align: center;
 }
