@@ -11,3 +11,11 @@ main{
     text-align: center;
     margin-top: 50px;
 }
+
+#email{
+    border-radius: 10px;
+}
+
+#password{
+    border-radius: 10px;
+}
