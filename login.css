@@ -22,4 +22,8 @@ main{
 
 #login {    
     border-radius: 10px;
+    height: 25px;
+    margin-top: 20px;
+    width: 100px;
+    background-color: blue;
 }
