@@ -13,22 +13,33 @@ main{
     border: 3px solid black;
     border-radius: 10px;
     width: 400px;
-    margin-left: 500px;
+    margin-left: 550px;
+    height: 140px;
+}
+
+#em{
+    margin-left: 20px;
 }
 
 #email{
     border-radius: 10px;
+    margin-top: 20px;
+    margin-left: 5px;
+    height: 20px;
 }
 
 #password{
     border-radius: 10px;
     margin-top: 10px;
+    margin-left: 5px;
+    height: 20px;
 }
 
 #login {    
     border-radius: 10px;
     height: 25px;
     margin-top: 20px;
-    width: 100px;
+    width: 180px;
     background-color: blue;
+    margin-left: 20px;
 }
