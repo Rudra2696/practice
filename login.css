@@ -3,6 +3,10 @@
     margin: 0px;
 }
 
+body{   
+    background-position: center;
+}
+
 #text{
 text-align: center;
 margin-top: 100px;
