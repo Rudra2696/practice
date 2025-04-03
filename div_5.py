@@ -5,6 +5,10 @@ a=[]
 while True:
     try:
         n=int(input("Enter the number of elements : "))
+        if n>0:
+            break
+        else:
+            print("Please enter a positive number")
     except (ValueError,TypeError,SyntaxError):
         print("Invalid Input")
 
