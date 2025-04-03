@@ -15,7 +15,9 @@ while True:
 
 for i in range(1,n+1):  
     m=int(input(f"Enter any integer {i} : "))
-    a.append(m) 
+    a.append(m)
+
+print("The numbers divisible by 5 are : ",end=" ")     
 for i in a:
     if i%5==0:
-        print(i)
+        print(i,end="   ")
