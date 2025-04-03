@@ -2,7 +2,12 @@
 
 a=[]
 
-n=int(input("Enter the number of elements : "))
+while True:
+    try:
+        n=int(input("Enter the number of elements : "))
+    except (ValueError,TypeError,SyntaxError):
+        print("Invalid Input")
+
 
 for i in range(1,n+1):  
     m=int(input(f"Enter any integer {i} : "))
