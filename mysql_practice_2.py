@@ -4,10 +4,15 @@ my=pymysql.connect(host="localhost",user="root",password="",database="Hello")
 
 cur=my.cursor()
 
-t="insert into student(name,marks) values(%s,%s)"
+try:
+    t="insert into student(name,marks) values(%s,%s)"
 
-ins=("Rohit",78)
+    ins=("Rohit",78)
 
-cur.execute(t,ins)
+    cur.execute(t,ins)
 
-my.commit()
+    my.commit()
+
+    print("Data inserted successfully")
+except :
+    print("Error")    
