@@ -1,18 +1,19 @@
 import pymysql
 
-my=pymysql.connect(host="localhost",user="root",password="",database="Hello")
+my = pymysql.connect(host="localhost", user="root", password="", database="Hello")
 
-cur=my.cursor()
+cur = my.cursor()
 
 try:
-    t="insert into student(name,marks) values(%s,%s)"
+    t = "insert into student(name,marks) values(%s,%s)"
 
-    ins=("Rohit",78)
+    ins = ("Virat", 78)
 
-    cur.execute(t,ins)
+    cur.execute(t, ins)
 
     my.commit()
 
     print("Data inserted successfully")
-except :
-    print("Error")    
+    
+except Exception:
+    print("Error")
