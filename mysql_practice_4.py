@@ -11,7 +11,7 @@ try:
 
     cur.execute(sql)
 
-    data=sql.fetchall()
+    data=cur.fetchall()
 
     for i in data:
         print("{:<15}{:<15}{:<15}".format(i[0],i[1],i[2]))
