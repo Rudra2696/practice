@@ -4,8 +4,13 @@ my = pymysql.connect(host="localhost", user="root", password="", database="Hello
 
 cur = my.cursor()
 
-delete_id=int(input("Enter the ID : "))
-
+while True:
+    try:
+        delete_id=int(input("Enter the ID : "))
+        break
+    except (ValueError,TypeError,SyntaxError):
+        print("Invalid Input")
+        
 try:
     sql="delete from student where id=%s"
 
