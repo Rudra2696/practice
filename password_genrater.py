@@ -6,7 +6,7 @@ while True:
         if n>0:
             break
         else:
-            print("Please enter a positive number")
+            print("Please enter only positive integer")
     except (ValueError,TypeError,SyntaxError):
         print("Invalid Input")
 
