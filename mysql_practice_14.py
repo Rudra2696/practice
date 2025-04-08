@@ -6,7 +6,7 @@ cur=my.cursor()
 print("{:<15}{:<15}{:<15}".format("ID","Name","Surename"))
 
 try:
-    sql="select student.id,student.name,result.surnameame from student left join result on student.id=result.id"
+    sql="select student.id,student.name,result.surnameame from student lemysql_practice_15ft join result on student.id=result.id"
 
     cur.execute(sql)
 
