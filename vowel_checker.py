@@ -9,9 +9,9 @@ while True:
     except (ValueError,TypeError,SyntaxError,KeyError):
         print("Something went wrong")
 
-m=len(b)
+
 c=0
-for i in range(0,m):
+for i in range(0,len(b)):
     if b[i] in "aeiou":
         c=c+1
 print(f"{n} has {c} vowels")        
