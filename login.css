@@ -18,7 +18,7 @@ main{
     border-radius: 10px;
     width: 400px;
     margin-left: 550px;
-    height: 140px;
+    height: 190px;
 }
 
 
@@ -43,4 +43,17 @@ main{
     width: 180px;
     background-color: blue;
     margin-left: 20px;
+}
+
+#em{
+    margin-left: 5px;
+    margin-top: 20px;
+}
+
+#eml{
+    margin-left: 5px;
+}
+
+#pass{
+    margin-top: 20px;
 }
