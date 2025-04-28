@@ -27,22 +27,25 @@ main{
     margin-top: 20px;
     margin-left: 5px;
     height: 20px;
+    width: 240px;
 }
 
 #password{
     border-radius: 10px;
     margin-top: 10px;
-    margin-left: 5px;
+    margin-left: 10px;
     height: 20px;
+    width: 220px;
 }
 
 #login {    
     border-radius: 10px;
     height: 25px;
     margin-top: 30px;
-    width: 180px;
+    width: 250px;
     background-color: blue;
     margin-left: 20px;
+    
 }
 
 #em{
@@ -56,4 +59,5 @@ main{
 
 #pass{
     margin-top: 20px;
+    margin-left: 0px;
 }
