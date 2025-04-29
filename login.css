@@ -41,10 +41,10 @@ main{
 #login {    
     border-radius: 10px;
     height: 25px;
-    margin-top: 30px;
+    margin-top: 50px;
     width: 250px;
     background-color: blue;
-    margin-left: 20px;
+    margin-left: 10px;
     
 }
 
@@ -58,6 +58,9 @@ main{
 }
 
 #pass{
-    margin-top: 20px;
+    margin-top: 30px;
     margin-left: 0px;
+}
+#ep{
+    margin-top: 40px;
 }
