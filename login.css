@@ -23,7 +23,7 @@ main{
 
 
 #email{
-    border-radius: 10px;
+    border-radius: 15px;
     margin-top: 20px;
     margin-left: 5px;
     height: 25px;
@@ -31,7 +31,7 @@ main{
 }
 
 #password{
-    border-radius: 10px;
+    border-radius: 15px;
     margin-top: 10px;
     margin-left: 0px;
     height: 25px;
