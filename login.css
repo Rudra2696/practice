@@ -28,6 +28,7 @@ main{
     margin-left: 5px;
     height: 25px;
     width: 240px;
+    border-color: navy;
 }
 
 #password{
@@ -36,6 +37,7 @@ main{
     margin-left: 0px;
     height: 25px;
     width: 230px;
+    border-color: navy;
 }
 
 #login {    
@@ -60,6 +62,7 @@ main{
 #pass{
     margin-top: 30px;
     margin-left: 0px;
+    
 }
 #ep{
     margin-top: 40px;
